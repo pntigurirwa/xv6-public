@@ -93,3 +93,15 @@ sys_cps(void)
 {
   return cps();
 }
+//implementation of date
+int
+sys_date(void)
+{
+    struct rtcdate *r;
+    if (argptr(0, (char **) &r, sizeof(struct rtcdate)) < 0)
+        return -1;
+    cmostime(r);
+    return 0;
+}
+
+
