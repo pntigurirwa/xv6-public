@@ -19,7 +19,6 @@ sys_exit(void)
   exit();
   return 0;  // not reached
 }
-
 int
 sys_wait(void)
 {
@@ -89,8 +88,8 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
-int 
-sy_cps(void)
+int
+sys_cps(void)
 {
-return cps();
+  return cps();
 }
