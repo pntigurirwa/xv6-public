@@ -89,3 +89,8 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+int 
+sy_cps(void)
+{
+return cps();
+}
